@@ -7,6 +7,7 @@
   --font-small-med: 1.5rem;
   --font-med: 2rem;
   --font-large: 3rem;
+  --padding-container-big: 3em 4em;
 }
 
 * {
@@ -42,7 +43,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 3em 4em;
+  padding: var(--padding-container-big);
   box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
@@ -51,12 +52,14 @@ a {
 }
 
 .profile-picture {
-  max-width: 450px;
+  max-width: 500px;
+  z-index: 1;
 }
 
 .main-title {
   position: absolute;
   transform: translate(-85%, 40%);
+  z-index: 2;
 }
 
 .about-container {
@@ -65,16 +68,22 @@ a {
   flex-direction: column;
   gap: 30px;
   max-width: 550px;
+  min-height: 350px;
   background-color: var(--color-quaternary);
   color: var(--color-primary);
-  padding: 2em 1em;
-  padding-bottom: 1em;
+  padding: 2em 1.5em;
+  padding-bottom: .75em;
 }
 
 .about-container .icon-container {
   align-self: flex-end;
+  margin-top: 16px;
 }
 
 .icon {
   color: var(--color-primary);
+}
+
+.main {
+  padding: var(--padding-container-big);
 }
