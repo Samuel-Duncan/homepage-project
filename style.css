@@ -3,7 +3,7 @@
   --color-secondary: #455d7a;
   --color-tertiary: #f95959;
   --color-quaternary: #e3e3e3;
-  --font-small: 1rem;
+  --font-small: 1.1rem;
   --font-small-med: 1.5rem;
   --font-med: 2rem;
   --font-large: 3rem;
@@ -74,8 +74,8 @@ a {
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 550px;
+  gap: 15px;
+  max-width: 600px;
   min-height: 350px;
   background-color: var(--color-quaternary);
   padding: 2em 1.5em;
@@ -114,7 +114,7 @@ a {
 
 .proj-description-container {
   padding: 1.25rem 1.35rem;
-  min-height: 150px;
+  min-height: 140px;
 }
 
 .project-title-and-icon {
@@ -127,5 +127,34 @@ a {
 }
 
 .footer {
-  background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4em;
+  background-image: linear-gradient(45deg, var(--color-secondary), var(--color-primary));
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.left-container > * {
+  color: white;
+}
+
+.phone-number, .email {
+  color: var(--color-quaternary);
+}
+
+.icon-tabler-mail, .icon-tabler-phone {
+  transform: translateY(7px);
+  margin-right: 6px;
+  fill: var(--color-quaternary);
+}
+
+.footer-icon {
+  fill: var(--color-quaternary);
 }
