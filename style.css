@@ -7,7 +7,9 @@
   --font-small-med: 1.5rem;
   --font-med: 2rem;
   --font-large: 3rem;
-  --padding-container-big: 3em 4em;
+  --padding-container-big: 2.5em 3em;
+  --padding-container-small: 1em 1em;
+  --box-shadow-1: 0px 25px 20px -20px rgba(0, 0, 0, 0.35), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
 * {
@@ -15,6 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: var(--font-small);
+  color: var(--color-primary);
 }
 
 h1 {
@@ -37,22 +40,26 @@ a {
   overflow-y: hidden;
 }
 
+.wrapper > * {
+  padding: var(--padding-container-big);
+}
+
 .header {
-  background-image: linear-gradient(45deg, var(--color-secondary), var(--color-primary));
-  color: var(--color-quaternary);
+  background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary) );
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: var(--padding-container-big);
-  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--box-shadow-1)
 }
 
 .header > *:not(:nth-child(2)) {
-  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--box-shadow-1);
 }
 
 .profile-picture {
-  max-width: 500px;
+  width: 100%;
+  height: auto;
+  max-width: 400px;
   z-index: 1;
 }
 
@@ -60,6 +67,7 @@ a {
   position: absolute;
   transform: translate(-85%, 40%);
   z-index: 2;
+  color: var(--color-quaternary);
 }
 
 .about-container {
@@ -70,9 +78,8 @@ a {
   max-width: 550px;
   min-height: 350px;
   background-color: var(--color-quaternary);
-  color: var(--color-primary);
   padding: 2em 1.5em;
-  padding-bottom: .75em;
+  padding-bottom: 1em;
 }
 
 .about-container .icon-container {
@@ -84,6 +91,41 @@ a {
   color: var(--color-primary);
 }
 
-.main {
-  padding: var(--padding-container-big);
+.secondary-title {
+  margin-bottom: 1rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.project {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 750px;
+}
+
+.project-picture {
+  width: 100%;
+  height: auto;
+}
+
+.proj-description-container {
+  padding: 1.25rem 1.35rem;
+  min-height: 150px;
+}
+
+.project-title-and-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-description {
+  margin-top: .5rem;
+}
+
+.footer {
+  background-image: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
 }
