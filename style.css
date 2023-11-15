@@ -3,12 +3,12 @@
   --color-secondary: #455d7a;
   --color-tertiary: #f95959;
   --color-quaternary: #e3e3e3;
-  --font-small: 1.1rem;
+  --font-small: 1.075rem;
   --font-small-med: 1.5rem;
   --font-med: 2rem;
   --font-large: 3rem;
   --padding-container-big: 2.5em 3em;
-  --padding-container-small: 1em 1em;
+  --padding-container-small: 1em .5em;
   --box-shadow-1: 0px 25px 20px -20px rgba(0, 0, 0, 0.35), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
@@ -65,21 +65,25 @@ a {
 
 .main-title {
   position: absolute;
-  transform: translate(-85%, 40%);
+  transform: translate(-86%, 25%);
   z-index: 2;
-  color: var(--color-quaternary);
+  color: var(--color-primary);
 }
 
 .about-container {
   align-self: center;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: .75rem;
   max-width: 600px;
   min-height: 350px;
   background-color: var(--color-quaternary);
   padding: 2em 1.5em;
   padding-bottom: 1em;
+}
+
+.about-container > h2 {
+  border-bottom: 1px solid;
 }
 
 .about-container .icon-container {
@@ -104,7 +108,7 @@ a {
 
 .project {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  max-width: 750px;
+  max-width: 700px;
 }
 
 .project-picture {
@@ -145,16 +149,68 @@ a {
   color: white;
 }
 
+.left-container > .icon-container {
+  margin-top: 1em;
+}
+
+.left-container > h2 {
+  border-bottom: 1px solid;
+}
+
 .phone-number, .email {
   color: var(--color-quaternary);
 }
 
 .icon-tabler-mail, .icon-tabler-phone {
-  transform: translateY(7px);
-  margin-right: 6px;
+  transform: translateY(6px);
+  margin-right: 5px;
   fill: var(--color-quaternary);
 }
 
 .footer-icon {
   fill: var(--color-quaternary);
+}
+
+.footer-pic {
+  box-shadow: var(--box-shadow-1);
+}
+
+@media (max-width: 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1125px) {
+  .main-title {
+    transform: translate(0%, 45%);
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper > * {
+    padding: var(--padding-container-small);
+  }
+
+  .header > img {
+    transform: translateY(3%);
+  }
+
+  .header {
+    padding-top: 0px;
+  }
+
+  .secondary-title {
+    margin-bottom: .5rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer {
+    gap: 2em;
+  }
 }
