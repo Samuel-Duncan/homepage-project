@@ -8,7 +8,7 @@
   --font-med: 2rem;
   --font-large: 3rem;
   --padding-container-big: 2.5em 3em;
-  --padding-container-small: 1.5em 1.5em;
+  --padding-container-small: 1.25em 1.25em;
   --box-shadow-1: 0px 25px 20px -20px rgba(0, 0, 0, 0.35), 25px 0 20px -20px rgba(0, 0, 0, 0.45);
 }
 
@@ -42,6 +42,15 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+a svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+img {
+  vertical-align: middle;
 }
 
 .wrapper {
@@ -103,8 +112,8 @@ a {
   color: var(--color-primary);
 }
 
-.secondary-title {
-  margin-bottom: 1rem;
+.main, .proj-description-container {
+  background-color: var(--color-quaternary);
 }
 
 .projects-container {
@@ -132,10 +141,11 @@ a {
 .project-title-and-icon {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.project-title-and-icon > .icon-container {
-  transform: translateY(4px);
+.proj-description-container > .icon-container {
+  vertical-align: baseline;
 }
 
 .project-description {
@@ -173,18 +183,7 @@ a {
   color: var(--color-quaternary);
 }
 
-a[href^="mailto"], a[href^="tel"] {
-  color: var(--color-quaternary);
-  text-decoration: none;
-}
-
-.icon-tabler-mail, .icon-tabler-phone {
-  transform: translateY(7px);
-  margin-right: 5px;
-  fill: var(--color-quaternary);
-}
-
-.footer-icon {
+.footer-icon, .icon-tabler-mail, .icon-tabler-phone {
   fill: var(--color-quaternary);
 }
 
@@ -238,6 +237,13 @@ a[href^="mailto"], a[href^="tel"] {
   .footer {
     gap: 2em;
     padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  a[href^="mailto"], a[href^="tel"] {
+    color: var(--color-quaternary);
+    text-decoration: none;
   }
 
   .contact, .left-container > .icon-container, .about, .my-work {
@@ -245,6 +251,7 @@ a[href^="mailto"], a[href^="tel"] {
   }
 
   .footer-pic {
-    width: 100svw;
+    height: auto;
+    width: 100%;
   }
 }
