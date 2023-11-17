@@ -237,8 +237,8 @@ img {
   .footer {
     gap: 2em;
     padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: none;
+    padding-right: none;
   }
 
   a[href^="mailto"], a[href^="tel"] {
@@ -254,5 +254,6 @@ img {
     height: auto;
     width: 100svw;
     display: block;
+    box-shadow: none;
   }
 }
