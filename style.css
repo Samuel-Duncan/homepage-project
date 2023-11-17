@@ -252,6 +252,7 @@ img {
 
   .footer-pic {
     height: auto;
-    width: 100%;
+    width: 100svw;
+    display: block;
   }
 }
